@@ -1,5 +1,7 @@
 # carla-client-docker
-Carla Client (0.9.8) in a docker image
+Carla Client (0.9.8) as a docker image (ubuntu16.04)
+
+This repo contains a Carla Python API precompiled on Ubuntu 16.04. This enables any machine capable of running docker to quickly set up a Carla client.
 
 ### Getting Started (macOS)
 
@@ -23,6 +25,9 @@ python3 examples/automatic_control.py --host "host.docker.internal"
 
 ### References
 
-[X11 in docker on macOS]
+* [Carla]
+* [X11 in docker on macOS]
+
+[Carla]: https://github.com/carla-simulator/carla
 
 [X11 in docker on macOS]: https://gist.github.com/cschiewek/246a244ba23da8b9f0e7b11a68bf3285
