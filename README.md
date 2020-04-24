@@ -16,6 +16,11 @@ docker build -t carla-client-docker .
 docker run -e DISPLAY=$(hostname):0 -v /tmp/.X11-unix:/tmp/.X11-unix -it carla-client-docker
 ```
 
+In the docker container, run (assuming Carla server is running on ports 2000-2002 on the host machine):
+```bash
+python3 examples/automatic_control.py --host "host.docker.internal"
+```
+
 ### References
 
 [X11 in docker on macOS]
