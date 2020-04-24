@@ -1,5 +1,5 @@
 # carla-client-docker
-Carla Client (0.9.8) inside a docker image
+Carla Client (0.9.8) in a docker image
 
 ### Getting Started (macOS)
 
