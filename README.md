@@ -12,15 +12,23 @@ This repo contains a Carla Python API precompiled on Ubuntu 16.04. This enables 
 1. Go to the security tab and ensure "Allow connections from network clients" is checked.
 1. Run `xhost + ${hostname}` to allow connections to the macOS host *
 1. Setup a HOSTNAME env var `` export HOSTNAME=`hostname` ``*
-1. Build and run the docker image:
+1. Pull and run the docker image
 ```bash
-docker build -t carla-client-docker .
-docker run -e DISPLAY=$(hostname):0 -v /tmp/.X11-unix:/tmp/.X11-unix -it carla-client-docker
+docker pull docker.pkg.github.com/unicorns/carla-client-docker/carla-client:0.9.8
+docker run -e DISPLAY=$(hostname):0 -v /tmp/.X11-unix:/tmp/.X11-unix -it docker.pkg.github.com/unicorns/carla-client-docker/carla-client:0.9.8
 ```
 
 In the docker container, run (assuming Carla server is running on ports 2000-2002 on the host machine):
 ```bash
 python3 examples/automatic_control.py --host "host.docker.internal"
+```
+
+### Building
+
+```bash
+git clone https://github.com/unicorns/carla-client-docker.git
+cd carla-client-docker
+docker build -t carla-client-docker .
 ```
 
 ### References
